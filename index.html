@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CV Compass AI analyzes resumes against job descriptions and provides ATS-focused improvement guidance."
+    />
+    <title>CV Compass AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar" aria-label="Primary">
+        <a class="brand" href="#top" aria-label="CV Compass AI home">
+          <span class="brand-mark">C</span>
+          <span>CV Compass AI</span>
+        </a>
+        <nav class="topbar-actions" aria-label="Page sections">
+          <a href="#inputs">Analyzer</a>
+          <a href="#dashboard">Dashboard</a>
+          <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle dark mode">
+            <span class="theme-icon" aria-hidden="true"></span>
+          </button>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero-section">
+          <div class="hero-content">
+            <p class="eyebrow">AI resume intelligence for job seekers</p>
+            <h1>CV Compass AI</h1>
+            <p class="hero-subtitle">
+              Analyze your resume, improve ATS compatibility and discover opportunities to strengthen
+              your profile.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#inputs">Start analysis</a>
+              <button class="button button-secondary" type="button" id="loadDemoTop">Load demo data</button>
+            </div>
+          </div>
+          <aside class="hero-panel" aria-label="Sample match preview">
+            <div class="hero-score">
+              <div class="mini-gauge" style="--score: 84">
+                <span>84</span>
+              </div>
+              <div>
+                <p class="panel-label">ATS Match</p>
+                <h2>Strong fit</h2>
+                <p>Product analytics, SQL, and lifecycle experimentation are well aligned.</p>
+              </div>
+            </div>
+            <div class="signal-grid">
+              <span>Resume clarity</span>
+              <strong>91%</strong>
+              <span>Keyword coverage</span>
+              <strong>78%</strong>
+              <span>Seniority fit</span>
+              <strong>86%</strong>
+            </div>
+          </aside>
+        </section>
+
+        <section class="workspace-section" id="inputs">
+          <div class="section-heading">
+            <p class="eyebrow">Workspace</p>
+            <h2>Compare your resume with a target role</h2>
+          </div>
+
+          <div class="input-grid">
+            <article class="input-panel">
+              <div class="panel-header">
+                <div>
+                  <h3>Resume Input</h3>
+                  <p>Paste your current resume content.</p>
+                </div>
+                <button class="button button-ghost" type="button" id="uploadPdf">
+                  Upload PDF
+                </button>
+              </div>
+              <textarea
+                id="resumeInput"
+                spellcheck="true"
+                aria-label="Resume content"
+                placeholder="Paste your resume here..."
+              ></textarea>
+            </article>
+
+            <article class="input-panel">
+              <div class="panel-header">
+                <div>
+                  <h3>Job Description Input</h3>
+                  <p>Paste the job posting you want to target.</p>
+                </div>
+                <button class="button button-ghost" type="button" id="loadDemo">Demo data</button>
+              </div>
+              <textarea
+                id="jobInput"
+                spellcheck="true"
+                aria-label="Job description content"
+                placeholder="Paste the job description here..."
+              ></textarea>
+            </article>
+          </div>
+
+          <div class="analysis-toolbar">
+            <div>
+              <p class="toolbar-title">Prepared for OpenAI API integration</p>
+              <p class="toolbar-copy">
+                This MVP uses deterministic mock analysis now, with a clear client adapter for future API calls.
+              </p>
+            </div>
+            <button class="button button-primary button-large" type="button" id="analyzeButton">
+              Analyze match
+            </button>
+          </div>
+        </section>
+
+        <section class="dashboard-section" id="dashboard">
+          <div class="section-heading">
+            <p class="eyebrow">Results Dashboard</p>
+            <h2>ATS readiness and profile opportunities</h2>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="widget score-widget">
+              <div class="widget-header">
+                <span class="panel-label">ATS Match Score</span>
+                <strong id="scoreLabel">84/100</strong>
+              </div>
+              <div class="score-gauge" id="scoreGauge" style="--score: 84">
+                <span id="scoreValue">84</span>
+              </div>
+              <p id="scoreInsight">Strong match with clear opportunities to improve keyword coverage.</p>
+            </article>
+
+            <article class="widget radar-widget">
+              <div class="widget-header">
+                <span class="panel-label">Fit Radar</span>
+                <strong>6 signals</strong>
+              </div>
+              <canvas id="radarChart" width="360" height="280" aria-label="Radar chart"></canvas>
+            </article>
+
+            <article class="widget">
+              <div class="widget-header">
+                <span class="panel-label">Skill Comparison</span>
+                <strong id="skillFitLabel">4 of 6</strong>
+              </div>
+              <div class="skill-cards" id="skillCards"></div>
+            </article>
+
+            <article class="widget">
+              <div class="widget-header">
+                <span class="panel-label">Core Signals</span>
+                <strong>Progress</strong>
+              </div>
+              <div class="progress-list" id="progressList"></div>
+            </article>
+          </div>
+
+          <div class="details-grid">
+            <article class="detail-card">
+              <h3>Strengths</h3>
+              <ul id="strengthsList"></ul>
+            </article>
+            <article class="detail-card">
+              <h3>Missing Skills</h3>
+              <ul id="missingSkillsList"></ul>
+            </article>
+            <article class="detail-card">
+              <h3>Suggested Keywords</h3>
+              <div class="tag-list" id="keywordList"></div>
+            </article>
+            <article class="detail-card">
+              <h3>Resume Improvements</h3>
+              <ul id="improvementsList"></ul>
+            </article>
+            <article class="detail-card">
+              <h3>Recommended Technologies</h3>
+              <div class="tag-list" id="technologiesList"></div>
+            </article>
+            <article class="detail-card">
+              <h3>Recommended Certifications</h3>
+              <ul id="certificationsList"></ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="ai-section" aria-label="AI analysis">
+          <div class="section-heading">
+            <p class="eyebrow">AI Analysis Area</p>
+            <h2>Mock AI response</h2>
+          </div>
+          <div class="ai-grid">
+            <article class="ai-card">
+              <h3>Resume summary</h3>
+              <p id="summaryText"></p>
+            </article>
+            <article class="ai-card">
+              <h3>Compatibility analysis</h3>
+              <p id="compatibilityText"></p>
+            </article>
+            <article class="ai-card">
+              <h3>Improvement suggestions</h3>
+              <p id="suggestionsText"></p>
+            </article>
+            <article class="ai-card">
+              <h3>Recruiter perspective</h3>
+              <p id="recruiterText"></p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>
