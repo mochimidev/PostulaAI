@@ -20,7 +20,7 @@ renderAll(baseAnalysis);
 loadDemoButtons.forEach((button) => button.addEventListener("click", loadDemoData));
 
 uploadPdfButton.addEventListener("click", () => {
-  showToast("PDF upload is reserved for a future parser integration.");
+  showToast("La carga de PDF queda reservada para una futura integracion con parser.");
 });
 
 analyzeButton.addEventListener("click", () => {
@@ -28,7 +28,7 @@ analyzeButton.addEventListener("click", () => {
   const jobDescription = jobInput.value.trim();
 
   if (!resumeText || !jobDescription) {
-    showToast("Paste both a resume and a job description before analyzing.");
+    showToast("Pega un curriculum y una descripcion de empleo antes de analizar.");
     return;
   }
 
@@ -44,7 +44,7 @@ function loadDemoData() {
   jobInput.value = demoJobDescription;
   currentAnalysis = analyzeResume(demoResume, demoJobDescription);
   renderAll(currentAnalysis);
-  showToast("Realistic demo resume and job posting loaded.");
+  showToast("Curriculum y oferta laboral demo cargados.");
 }
 
 function renderAll(analysis) {

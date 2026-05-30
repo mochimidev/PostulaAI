@@ -3,7 +3,7 @@ export async function analyzeWithOpenAI({ resumeText, jobDescription }) {
 
   if (!hasBrowserKey) {
     throw new Error(
-      "OpenAI API integration is intentionally disabled in this frontend-only MVP. Add a backend proxy before sending API keys."
+      "La integracion con OpenAI API esta deshabilitada intencionalmente en este MVP frontend-only. Agrega un proxy backend antes de enviar API keys."
     );
   }
 

@@ -1,4 +1,4 @@
-const storageKey = "cv-compass-theme";
+const storageKey = "postulaai-theme";
 
 export function initTheme(toggleButton, onChange) {
   const storedTheme = localStorage.getItem(storageKey);

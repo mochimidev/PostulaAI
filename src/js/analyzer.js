@@ -9,11 +9,17 @@ const importantTerms = [
   "amplitude",
   "mixpanel",
   "experimentation",
+  "experimentacion",
   "a/b testing",
+  "pruebas a/b",
   "retention",
+  "retencion",
   "activation",
+  "activacion",
   "segmentation",
+  "segmentacion",
   "event tracking",
+  "tracking de eventos",
   "growth analytics",
   "cloud data warehouse",
   "reverse etl"
@@ -36,21 +42,21 @@ export function analyzeResume(resumeText, jobDescription) {
   analysis.missingSkills = mergeUnique(formatTerms(missingTerms), baseAnalysis.missingSkills).slice(0, 5);
   analysis.keywords = mergeUnique(formatTerms(missingTerms), baseAnalysis.keywords).slice(0, 10);
   analysis.progress = analysis.progress.map((item) => {
-    if (item.label === "Keyword coverage") return { ...item, value: Math.round(coverage * 100) || 78 };
-    if (item.label === "ATS structure") return { ...item, value: Math.round(lengthSignal * 100) || 81 };
-    if (item.label === "Impact clarity") return { ...item, value: hasImpactMetrics(resumeText) ? 88 : 68 };
+    if (item.label === "Cobertura de palabras clave") return { ...item, value: Math.round(coverage * 100) || 78 };
+    if (item.label === "Estructura ATS") return { ...item, value: Math.round(lengthSignal * 100) || 81 };
+    if (item.label === "Claridad de impacto") return { ...item, value: hasImpactMetrics(resumeText) ? 88 : 68 };
     return item;
   });
   analysis.radar = analysis.radar.map((item) => {
-    if (item.label === "Keywords") return { ...item, value: Math.round(coverage * 100) || 78 };
-    if (item.label === "Clarity") return { ...item, value: Math.round(lengthSignal * 100) || 84 };
+    if (item.label === "Palabras clave") return { ...item, value: Math.round(coverage * 100) || 78 };
+    if (item.label === "Claridad") return { ...item, value: Math.round(lengthSignal * 100) || 84 };
     return item;
   });
   analysis.skills = analysis.skills.map((skill) => {
     const isMatched = resume.includes(normalize(skill.name));
     return { ...skill, status: isMatched ? "matched" : skill.status };
   });
-  analysis.ai.compatibility = `This resume currently scores ${boundedScore}/100 against the target posting. It shows strong alignment on ${matchedTerms.slice(0, 4).join(", ") || "core role requirements"}, while the clearest ATS opportunities are ${formatTerms(missingTerms).slice(0, 3).join(", ") || "more exact job-title keywords"}.`;
+  analysis.ai.compatibility = `Este curriculum obtiene actualmente ${boundedScore}/100 frente a la oferta objetivo. Muestra buena alineacion en ${formatTerms(matchedTerms).slice(0, 4).join(", ") || "los requisitos centrales del rol"}, mientras que las oportunidades ATS mas claras son ${formatTerms(missingTerms).slice(0, 3).join(", ") || "palabras clave mas precisas del cargo"}.`;
 
   return analysis;
 }

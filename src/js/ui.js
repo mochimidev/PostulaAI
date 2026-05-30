@@ -83,10 +83,10 @@ function setStyle(id, property, value) {
 }
 
 function getScoreInsight(score) {
-  if (score >= 85) return "Excellent match. Small keyword and tooling refinements could lift visibility.";
-  if (score >= 70) return "Strong match with clear opportunities to improve ATS keyword coverage.";
-  if (score >= 55) return "Moderate fit. Prioritize missing skills and role-specific proof points.";
-  return "Low fit. Reframe the resume around the job's core requirements before applying.";
+  if (score >= 85) return "Compatibilidad excelente. Pequenos ajustes de palabras clave y herramientas pueden elevar la visibilidad.";
+  if (score >= 70) return "Alta compatibilidad con oportunidades claras para mejorar la cobertura ATS.";
+  if (score >= 55) return "Compatibilidad media. Prioriza habilidades faltantes y evidencias especificas del rol.";
+  return "Compatibilidad baja. Reenfoca el curriculum en los requisitos centrales del cargo antes de postular.";
 }
 
 function escapeHtml(value) {
