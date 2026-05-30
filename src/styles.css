@@ -54,6 +54,7 @@ body {
     radial-gradient(circle at 88% 18%, rgba(20, 184, 199, 0.13), transparent 28rem),
     var(--bg);
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 button,
@@ -166,6 +167,11 @@ a {
   font-size: clamp(3rem, 8vw, 6.6rem);
   line-height: 0.92;
   letter-spacing: 0;
+}
+
+.hero-content,
+.hero-panel {
+  min-width: 0;
 }
 
 .hero-subtitle {
@@ -306,7 +312,7 @@ a {
 
 .signal-grid {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 14px;
   margin-top: 24px;
   padding-top: 22px;
@@ -326,6 +332,7 @@ a {
   margin: 6px 0 0;
   font-size: clamp(1.8rem, 4vw, 3rem);
   line-height: 1.05;
+  overflow-wrap: anywhere;
 }
 
 .input-grid {
@@ -599,6 +606,20 @@ li {
 
   .hero-subtitle {
     font-size: 1.03rem;
+  }
+
+  .section-heading h2 {
+    font-size: 1.32rem;
+    line-height: 1.14;
+  }
+
+  .signal-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .signal-grid strong {
+    margin-bottom: 8px;
   }
 
   .hero-score,

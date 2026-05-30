@@ -1,73 +1,73 @@
 export const demoResume = `Maya Chen
-Senior Product Analyst
-San Francisco, CA | maya.chen@example.com | linkedin.com/in/mayachen
+Analista Senior de Producto
+Santiago, Chile | maya.chen@example.com | linkedin.com/in/mayachen
 
-SUMMARY
-Product analyst with 6 years of experience helping SaaS teams improve activation, retention, and monetization. Strong background in SQL, experimentation, dashboard design, executive storytelling, and cross-functional product discovery.
+RESUMEN
+Analista de producto con 6 anos de experiencia ayudando a equipos SaaS a mejorar activacion, retencion y monetizacion. Solida experiencia en SQL, experimentacion, diseno de dashboards, storytelling ejecutivo y descubrimiento de producto con equipos multidisciplinarios.
 
-EXPERIENCE
-Senior Product Analyst, Brightlane Cloud
-2022 - Present
-- Partnered with product managers and lifecycle marketers to increase new-user activation by 18% through funnel analysis, cohort segmentation, and onboarding experiments.
-- Built self-serve dashboards in Looker and Tableau used weekly by product, sales, and customer success leadership.
-- Designed A/B tests for pricing page changes, trial nudges, and onboarding milestones; improved trial-to-paid conversion by 11%.
-- Created a retention health model using SQL, dbt, and warehouse event data to identify accounts at risk.
+EXPERIENCIA
+Analista Senior de Producto, Brightlane Cloud
+2022 - Presente
+- Colabore con product managers y equipos de lifecycle marketing para aumentar la activacion de nuevos usuarios en 18% mediante analisis de embudos, segmentacion de cohortes y experimentos de onboarding.
+- Construí dashboards self-service en Looker y Tableau utilizados semanalmente por liderazgo de producto, ventas y customer success.
+- Disene pruebas A/B para cambios en pagina de precios, nudges de trial e hitos de onboarding; mejore la conversion de trial a pago en 11%.
+- Cree un modelo de salud de retencion usando SQL, dbt y datos de eventos del warehouse para identificar cuentas en riesgo.
 
-Product Data Analyst, Northstar Labs
+Analista de Datos de Producto, Northstar Labs
 2019 - 2022
-- Analyzed feature adoption and customer journeys for a B2B collaboration platform with 45k monthly active users.
-- Standardized KPI definitions and partnered with engineering to improve analytics instrumentation.
-- Presented insights to senior stakeholders and influenced roadmap prioritization.
+- Analice adopcion de funcionalidades y recorridos de clientes para una plataforma B2B de colaboracion con 45k usuarios activos mensuales.
+- Estandarice definiciones de KPI y trabaje con ingenieria para mejorar la instrumentacion analitica.
+- Presente insights a stakeholders senior e influí en la priorizacion del roadmap.
 
-SKILLS
-SQL, Python, dbt, Looker, Tableau, Amplitude, Mixpanel, A/B testing, cohort analysis, product analytics, lifecycle analytics, stakeholder communication, experimentation, data storytelling`;
+HABILIDADES
+SQL, Python, dbt, Looker, Tableau, Amplitude, Mixpanel, pruebas A/B, analisis de cohortes, analitica de producto, analitica de ciclo de vida, comunicacion con stakeholders, experimentacion, storytelling con datos`;
 
-export const demoJobDescription = `Senior Product Analyst - Growth
+export const demoJobDescription = `Analista Senior de Producto - Growth
 
-We are hiring a Senior Product Analyst to partner with our Growth and Lifecycle teams. This person will identify opportunities across acquisition, activation, conversion, and retention, then translate insights into experiments and product recommendations.
+Buscamos un Analista Senior de Producto para trabajar junto a nuestros equipos de Growth y Lifecycle. Esta persona identificara oportunidades en adquisicion, activacion, conversion y retencion, y traducira insights en experimentos y recomendaciones de producto.
 
-Responsibilities:
-- Analyze product funnels, cohorts, user behavior, and retention patterns.
-- Design experiment readouts and partner with product managers on A/B testing strategy.
-- Build dashboards and recurring reporting for executive and operating teams.
-- Work with engineering to define analytics instrumentation and event tracking.
-- Communicate recommendations clearly to technical and non-technical stakeholders.
+Responsabilidades:
+- Analizar embudos de producto, cohortes, comportamiento de usuarios y patrones de retencion.
+- Disenar lecturas de experimentos y colaborar con product managers en estrategia de pruebas A/B.
+- Construir dashboards y reportes recurrentes para equipos ejecutivos y operativos.
+- Trabajar con ingenieria para definir instrumentacion analitica y tracking de eventos.
+- Comunicar recomendaciones con claridad a audiencias tecnicas y no tecnicas.
 
-Requirements:
-- 5+ years in product analytics, growth analytics, or business intelligence.
-- Advanced SQL and experience with cloud data warehouses.
-- Experience with experimentation, statistical thinking, and product metrics.
-- Familiarity with Looker, Tableau, Amplitude, Mixpanel, dbt, and Python.
-- Strong communication, business judgment, and executive storytelling.
+Requisitos:
+- 5+ anos en analitica de producto, growth analytics o business intelligence.
+- SQL avanzado y experiencia con cloud data warehouses.
+- Experiencia con experimentacion, pensamiento estadistico y metricas de producto.
+- Familiaridad con Looker, Tableau, Amplitude, Mixpanel, dbt y Python.
+- Comunicacion solida, criterio de negocio y storytelling ejecutivo.
 
-Nice to have:
-- Experience with PLG SaaS, lifecycle marketing, churn analysis, reverse ETL, and customer segmentation.
-- Certifications in Google Analytics, Tableau, or cloud data platforms.`;
+Deseable:
+- Experiencia con SaaS PLG, lifecycle marketing, analisis de churn, reverse ETL y segmentacion de clientes.
+- Certificaciones en Google Analytics, Tableau o plataformas cloud de datos.`;
 
 export const baseAnalysis = {
   score: 84,
   strengths: [
-    "Strong alignment with product analytics, growth funnels, and lifecycle experimentation.",
-    "Resume includes measurable business outcomes for activation and conversion.",
-    "Tooling overlaps well with SQL, Looker, Tableau, dbt, Amplitude, and Mixpanel.",
-    "Clear evidence of stakeholder communication and executive-facing reporting."
+    "Alta alineacion con analitica de producto, embudos de growth y experimentacion de ciclo de vida.",
+    "El curriculum incluye resultados medibles en activacion y conversion.",
+    "El stack tecnico coincide bien con SQL, Looker, Tableau, dbt, Amplitude y Mixpanel.",
+    "Hay evidencia clara de comunicacion con stakeholders y reporteria ejecutiva."
   ],
-  missingSkills: ["Reverse ETL", "Cloud data warehouse naming", "Formal statistical testing language"],
+  missingSkills: ["Reverse ETL", "Nombre explicito del cloud data warehouse", "Lenguaje formal de pruebas estadisticas"],
   keywords: [
     "growth analytics",
-    "PLG SaaS",
-    "activation",
-    "retention",
-    "event tracking",
-    "customer segmentation",
-    "churn analysis",
-    "executive storytelling"
+    "SaaS PLG",
+    "activacion",
+    "retencion",
+    "tracking de eventos",
+    "segmentacion de clientes",
+    "analisis de churn",
+    "storytelling ejecutivo"
   ],
   improvements: [
-    "Add one bullet naming the cloud warehouse environment used, such as Snowflake, BigQuery, or Redshift.",
-    "Mention statistical confidence, power, or experiment design methods where relevant.",
-    "Add a concise tools line near the top for ATS scanning.",
-    "Use the exact phrase growth analytics if it accurately represents recent work."
+    "Agrega un bullet que nombre el entorno de cloud warehouse usado, como Snowflake, BigQuery o Redshift.",
+    "Menciona confianza estadistica, potencia o metodos de diseno experimental cuando corresponda.",
+    "Incluye una linea breve de herramientas cerca del inicio para facilitar el escaneo ATS.",
+    "Usa la frase exacta growth analytics si representa correctamente tu experiencia reciente."
   ],
   technologies: ["Snowflake", "BigQuery", "Hightouch", "Census", "dbt Metrics", "Segment"],
   certifications: [
@@ -77,36 +77,36 @@ export const baseAnalysis = {
     "dbt Analytics Engineering Certification"
   ],
   progress: [
-    { label: "Keyword coverage", value: 78 },
-    { label: "Experience match", value: 92 },
-    { label: "Tools alignment", value: 86 },
-    { label: "Impact clarity", value: 88 },
-    { label: "ATS structure", value: 81 }
+    { label: "Cobertura de palabras clave", value: 78 },
+    { label: "Afinidad de experiencia", value: 92 },
+    { label: "Alineacion de herramientas", value: 86 },
+    { label: "Claridad de impacto", value: 88 },
+    { label: "Estructura ATS", value: 81 }
   ],
   skills: [
-    { name: "SQL", status: "matched", fit: "Advanced" },
-    { name: "A/B testing", status: "matched", fit: "Strong" },
-    { name: "Looker/Tableau", status: "matched", fit: "Strong" },
-    { name: "Product metrics", status: "matched", fit: "Strong" },
-    { name: "Reverse ETL", status: "missing", fit: "Add proof" },
-    { name: "Cloud warehouse", status: "missing", fit: "Name tool" }
+    { name: "SQL", status: "matched", fit: "Avanzado" },
+    { name: "Pruebas A/B", status: "matched", fit: "Solido" },
+    { name: "Looker/Tableau", status: "matched", fit: "Solido" },
+    { name: "Metricas de producto", status: "matched", fit: "Solido" },
+    { name: "Reverse ETL", status: "missing", fit: "Agregar evidencia" },
+    { name: "Cloud warehouse", status: "missing", fit: "Nombrar herramienta" }
   ],
   radar: [
-    { label: "Skills", value: 86 },
-    { label: "Tools", value: 82 },
-    { label: "Impact", value: 90 },
+    { label: "Habilidades", value: 86 },
+    { label: "Herramientas", value: 82 },
+    { label: "Impacto", value: 90 },
     { label: "Keywords", value: 78 },
     { label: "Seniority", value: 88 },
-    { label: "Clarity", value: 84 }
+    { label: "Claridad", value: 84 }
   ],
   ai: {
     summary:
-      "The resume presents a senior product analyst with strong SaaS growth experience, measurable product outcomes, and solid analytics tooling.",
+      "El curriculum presenta a una analista senior de producto con fuerte experiencia en growth SaaS, resultados medibles y buen dominio de herramientas analiticas.",
     compatibility:
-      "The profile matches the core role requirements well, especially around funnel analysis, experimentation, dashboards, and stakeholder communication. The main gaps are explicit cloud warehouse language and reverse ETL exposure.",
+      "El perfil coincide bien con los requisitos centrales del rol, especialmente en analisis de embudos, experimentacion, dashboards y comunicacion con stakeholders. Las brechas principales son el lenguaje explicito de cloud warehouse y la exposicion a reverse ETL.",
     suggestions:
-      "Add a sharper technical summary, mirror important job keywords naturally, and strengthen experiment bullets with statistical framing where accurate.",
+      "Agrega un resumen tecnico mas preciso, incorpora de forma natural las palabras clave relevantes de la oferta y refuerza los bullets de experimentacion con contexto estadistico cuando sea correcto.",
     recruiter:
-      "A recruiter would likely see this candidate as qualified for a first screen. The resume would become stronger if it named the data stack more explicitly and connected growth work to PLG SaaS outcomes."
+      "Un reclutador probablemente veria a esta candidata como apta para una primera entrevista. El curriculum seria mas fuerte si nombrara el stack de datos con mayor precision y conectara el trabajo de growth con resultados SaaS PLG."
   }
 };

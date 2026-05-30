@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="CV Compass AI analyzes resumes against job descriptions and provides ATS-focused improvement guidance."
+      content="CV Compass AI analiza curriculums frente a descripciones de empleo y entrega recomendaciones para mejorar la compatibilidad ATS."
     />
     <title>CV Compass AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,10 +23,10 @@
           <span class="brand-mark">C</span>
           <span>CV Compass AI</span>
         </a>
-        <nav class="topbar-actions" aria-label="Page sections">
-          <a href="#inputs">Analyzer</a>
+        <nav class="topbar-actions" aria-label="Secciones de la pagina">
+          <a href="#inputs">Analizador</a>
           <a href="#dashboard">Dashboard</a>
-          <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          <button class="icon-button" id="themeToggle" type="button" aria-label="Cambiar modo oscuro">
             <span class="theme-icon" aria-hidden="true"></span>
           </button>
         </nav>
@@ -35,34 +35,34 @@
       <main id="top">
         <section class="hero-section">
           <div class="hero-content">
-            <p class="eyebrow">AI resume intelligence for job seekers</p>
+            <p class="eyebrow">Inteligencia de CV con IA para postulantes</p>
             <h1>CV Compass AI</h1>
             <p class="hero-subtitle">
-              Analyze your resume, improve ATS compatibility and discover opportunities to strengthen
-              your profile.
+              Analiza tu curriculum, mejora la compatibilidad ATS y descubre oportunidades para fortalecer
+              tu perfil.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#inputs">Start analysis</a>
-              <button class="button button-secondary" type="button" id="loadDemoTop">Load demo data</button>
+              <a class="button button-primary" href="#inputs">Iniciar analisis</a>
+              <button class="button button-secondary" type="button" id="loadDemoTop">Cargar demo</button>
             </div>
           </div>
-          <aside class="hero-panel" aria-label="Sample match preview">
+          <aside class="hero-panel" aria-label="Vista previa de compatibilidad">
             <div class="hero-score">
               <div class="mini-gauge" style="--score: 84">
                 <span>84</span>
               </div>
               <div>
-                <p class="panel-label">ATS Match</p>
-                <h2>Strong fit</h2>
-                <p>Product analytics, SQL, and lifecycle experimentation are well aligned.</p>
+                <p class="panel-label">Compatibilidad ATS</p>
+                <h2>Alta afinidad</h2>
+                <p>Analisis de producto, SQL y experimentacion de ciclo de vida estan bien alineados.</p>
               </div>
             </div>
             <div class="signal-grid">
-              <span>Resume clarity</span>
+              <span>Claridad del CV</span>
               <strong>91%</strong>
-              <span>Keyword coverage</span>
+              <span>Cobertura de palabras clave</span>
               <strong>78%</strong>
-              <span>Seniority fit</span>
+              <span>Ajuste de seniority</span>
               <strong>86%</strong>
             </div>
           </aside>
@@ -70,88 +70,88 @@
 
         <section class="workspace-section" id="inputs">
           <div class="section-heading">
-            <p class="eyebrow">Workspace</p>
-            <h2>Compare your resume with a target role</h2>
+            <p class="eyebrow">Area de trabajo</p>
+            <h2>Compara tu curriculum con un rol objetivo</h2>
           </div>
 
           <div class="input-grid">
             <article class="input-panel">
               <div class="panel-header">
                 <div>
-                  <h3>Resume Input</h3>
-                  <p>Paste your current resume content.</p>
+                  <h3>Ingreso de curriculum</h3>
+                  <p>Pega el contenido actual de tu CV.</p>
                 </div>
                 <button class="button button-ghost" type="button" id="uploadPdf">
-                  Upload PDF
+                  Subir PDF
                 </button>
               </div>
               <textarea
                 id="resumeInput"
                 spellcheck="true"
-                aria-label="Resume content"
-                placeholder="Paste your resume here..."
+                aria-label="Contenido del curriculum"
+                placeholder="Pega tu curriculum aqui..."
               ></textarea>
             </article>
 
             <article class="input-panel">
               <div class="panel-header">
                 <div>
-                  <h3>Job Description Input</h3>
-                  <p>Paste the job posting you want to target.</p>
+                  <h3>Ingreso de descripcion del empleo</h3>
+                  <p>Pega la oferta laboral que quieres analizar.</p>
                 </div>
-                <button class="button button-ghost" type="button" id="loadDemo">Demo data</button>
+                <button class="button button-ghost" type="button" id="loadDemo">Datos demo</button>
               </div>
               <textarea
                 id="jobInput"
                 spellcheck="true"
-                aria-label="Job description content"
-                placeholder="Paste the job description here..."
+                aria-label="Contenido de la descripcion del empleo"
+                placeholder="Pega la descripcion del empleo aqui..."
               ></textarea>
             </article>
           </div>
 
           <div class="analysis-toolbar">
             <div>
-              <p class="toolbar-title">Prepared for OpenAI API integration</p>
+              <p class="toolbar-title">Preparado para integracion con OpenAI API</p>
               <p class="toolbar-copy">
-                This MVP uses deterministic mock analysis now, with a clear client adapter for future API calls.
+                Este MVP usa analisis mock deterministico, con un adaptador claro para futuras llamadas a la API.
               </p>
             </div>
             <button class="button button-primary button-large" type="button" id="analyzeButton">
-              Analyze match
+              Analizar compatibilidad
             </button>
           </div>
         </section>
 
         <section class="dashboard-section" id="dashboard">
           <div class="section-heading">
-            <p class="eyebrow">Results Dashboard</p>
-            <h2>ATS readiness and profile opportunities</h2>
+            <p class="eyebrow">Dashboard de resultados</p>
+            <h2>Preparacion ATS y oportunidades del perfil</h2>
           </div>
 
           <div class="dashboard-grid">
             <article class="widget score-widget">
               <div class="widget-header">
-                <span class="panel-label">ATS Match Score</span>
+                <span class="panel-label">Puntaje de compatibilidad ATS</span>
                 <strong id="scoreLabel">84/100</strong>
               </div>
               <div class="score-gauge" id="scoreGauge" style="--score: 84">
                 <span id="scoreValue">84</span>
               </div>
-              <p id="scoreInsight">Strong match with clear opportunities to improve keyword coverage.</p>
+              <p id="scoreInsight">Alta compatibilidad con oportunidades claras para mejorar palabras clave.</p>
             </article>
 
             <article class="widget radar-widget">
               <div class="widget-header">
-                <span class="panel-label">Fit Radar</span>
-                <strong>6 signals</strong>
+                <span class="panel-label">Radar de afinidad</span>
+                <strong>6 senales</strong>
               </div>
-              <canvas id="radarChart" width="360" height="280" aria-label="Radar chart"></canvas>
+              <canvas id="radarChart" width="360" height="280" aria-label="Grafico radar"></canvas>
             </article>
 
             <article class="widget">
               <div class="widget-header">
-                <span class="panel-label">Skill Comparison</span>
+                <span class="panel-label">Comparacion de habilidades</span>
                 <strong id="skillFitLabel">4 of 6</strong>
               </div>
               <div class="skill-cards" id="skillCards"></div>
@@ -159,8 +159,8 @@
 
             <article class="widget">
               <div class="widget-header">
-                <span class="panel-label">Core Signals</span>
-                <strong>Progress</strong>
+                <span class="panel-label">Senales principales</span>
+                <strong>Progreso</strong>
               </div>
               <div class="progress-list" id="progressList"></div>
             </article>
@@ -168,52 +168,52 @@
 
           <div class="details-grid">
             <article class="detail-card">
-              <h3>Strengths</h3>
+              <h3>Fortalezas</h3>
               <ul id="strengthsList"></ul>
             </article>
             <article class="detail-card">
-              <h3>Missing Skills</h3>
+              <h3>Habilidades faltantes</h3>
               <ul id="missingSkillsList"></ul>
             </article>
             <article class="detail-card">
-              <h3>Suggested Keywords</h3>
+              <h3>Palabras clave sugeridas</h3>
               <div class="tag-list" id="keywordList"></div>
             </article>
             <article class="detail-card">
-              <h3>Resume Improvements</h3>
+              <h3>Mejoras del curriculum</h3>
               <ul id="improvementsList"></ul>
             </article>
             <article class="detail-card">
-              <h3>Recommended Technologies</h3>
+              <h3>Tecnologias recomendadas</h3>
               <div class="tag-list" id="technologiesList"></div>
             </article>
             <article class="detail-card">
-              <h3>Recommended Certifications</h3>
+              <h3>Certificaciones recomendadas</h3>
               <ul id="certificationsList"></ul>
             </article>
           </div>
         </section>
 
-        <section class="ai-section" aria-label="AI analysis">
+        <section class="ai-section" aria-label="Analisis de IA">
           <div class="section-heading">
-            <p class="eyebrow">AI Analysis Area</p>
-            <h2>Mock AI response</h2>
+            <p class="eyebrow">Area de analisis IA</p>
+            <h2>Respuesta mock de IA</h2>
           </div>
           <div class="ai-grid">
             <article class="ai-card">
-              <h3>Resume summary</h3>
+              <h3>Resumen del curriculum</h3>
               <p id="summaryText"></p>
             </article>
             <article class="ai-card">
-              <h3>Compatibility analysis</h3>
+              <h3>Analisis de compatibilidad</h3>
               <p id="compatibilityText"></p>
             </article>
             <article class="ai-card">
-              <h3>Improvement suggestions</h3>
+              <h3>Sugerencias de mejora</h3>
               <p id="suggestionsText"></p>
             </article>
             <article class="ai-card">
-              <h3>Recruiter perspective</h3>
+              <h3>Perspectiva del reclutador</h3>
               <p id="recruiterText"></p>
             </article>
           </div>
