@@ -1,8 +1,11 @@
 import { analyzeResume } from "./analyzer.js";
 import { drawRadarChart } from "./charts.js";
 import { baseAnalysis, demoJobDescription, demoResume } from "./demoData.js";
+import { app as firebaseApp } from "./firebase.js";
 import { getChartTheme, initTheme } from "./theme.js";
 import { renderAnalysis, showToast } from "./ui.js";
+
+void firebaseApp;
 
 const resumeInput = document.getElementById("resumeInput");
 const jobInput = document.getElementById("jobInput");

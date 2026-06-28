@@ -59,6 +59,7 @@ Visualizacion del puntaje ATS final, radar de afinidad, desglose de fortalezas, 
 - Multer
 - pdf-parse
 - OpenAI API
+- Firebase Web SDK
 
 ## Requisitos Previos
 
@@ -91,6 +92,21 @@ npm run dev
 ### Frontend
 
 Abrir `index.html` con un servidor local o integrar el frontend con el backend segun tu entorno de despliegue.
+
+## Firebase
+
+El frontend inicializa Firebase en `src/js/firebase.js` usando el config web del proyecto.
+Como la app no usa bundler, `index.html` incluye un `importmap` para resolver `firebase/app` en navegador.
+
+## Deploy en Firebase Hosting
+
+Con los archivos `firebase.json` y `.firebaserc` ya presentes, puedes ejecutar:
+
+```bash
+firebase deploy
+```
+
+Esto publica el frontend estatico. El servidor `server/` sigue siendo aparte y no se despliega con Hosting tal como esta ahora.
 
 ## Endpoint de Analisis
 
